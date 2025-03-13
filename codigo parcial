@@ -1,0 +1,47 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class NumerosInteligentes {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        // Solicitar la cantidad de números a validar
+        System.out.print("Ingresa la cantidad de números a validar: ");
+        int cantidad = scanner.nextInt();
+
+        int[] numeros = new int[cantidad];
+
+        // Generar números aleatorios y mostrarlos separados por comas
+        System.out.print("Números generados: ");
+        for (int i = 0; i < cantidad; i++) {
+            numeros[i] = random.nextInt(100) + 1; // Generar enteros positivos (entre 1 y 100)
+            System.out.print(numeros[i]);
+            if (i < cantidad - 1) System.out.print(", ");
+        }
+        System.out.println();
+
+        // Validar si los números son inteligentes
+        for (int numero : numeros) {
+            if (esInteligente(numero)) {
+                System.out.println(numero + ": Sí");
+            } else {
+                System.out.println(numero + ": No");
+            }
+        }
+    }
+
+    // Método para determinar si un número es inteligente
+    public static boolean esInteligente(int numero) {
+        int contadorFactores = 0;
+
+        for (int i = 1; i <= numero; i++) {
+            if (numero % i == 0) {
+                contadorFactores++;
+            }
+        }
+
+        // Un número es inteligente si tiene un número impar de factores
+        return contadorFactores % 2 != 0;
+    }
+}
