@@ -1,0 +1,52 @@
+import java.time.LocalDate;
+
+public class Persona {
+    private String nombre;
+    private String nif;
+    private LocalDate fechaNac;
+
+    public Persona(String nombre, String nif, LocalDate fechaNac) {
+        this.nombre = nombre;
+        this.nif = nif;
+        this.fechaNac = fechaNac;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getNif() {
+        return nif;
+    }
+
+    public LocalDate getFechaNac() {
+        return fechaNac;
+    }
+
+    
+    public String toString() {
+        return "Nombre: " + nombre + ", NIF: " + nif + ", Fecha de nacimiento: " + fechaNac;
+    }
+}
+
+
+
+
+
+
+public class Jugador extends Persona {
+    private int numFed;
+
+    public Jugador(String nombre, String nif, LocalDate fechaNac, int numFed) {
+        super(nombre, nif, fechaNac);
+        this.numFed = numFed;
+    }
+
+    public int getNumFed() {
+        return numFed;
+    }
+
+    public String toString() {
+        return super.toString() + ", Número Federación: " + numFed;
+    }
+}
