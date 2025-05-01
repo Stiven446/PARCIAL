@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class InvertirArray {
+
+    // Función que invierte el array
+    public static String[] invertirArray(String[] array) {
+        int n = array.length;
+        String[] invertido = new String[n];
+        for (int i = 0; i < n; i++) {
+            invertido[i] = array[n - 1 - i];
+        }
+        return invertido;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita la cantidad de elementos
+        System.out.print("Ingrese la cantidad de elementos del array: ");
+        int cantidad = scanner.nextInt();
+        scanner.nextLine();  // Limpiar el buffer
+
+        String[] array = new String[cantidad];
+
+        // Solicita los elementos del array
+        for (int i = 0; i < cantidad; i++) {
+            System.out.print("Ingrese el valor del elemento " + (i + 1) + ": ");
+            array[i] = scanner.nextLine();
+        }
+
+        // Muestra el array original
+        System.out.print("Array original: ");
+        mostrarArray(array);
+
+        // Invierte el array
+        String[] arrayInvertido = invertirArray(array);
+
+        // Muestra el array invertido
+        System.out.print("Array invertido: ");
+        mostrarArray(arrayInvertido);
+
+        scanner.close();
+    }
+
+    // Función para mostrar un array
+    public static void mostrarArray(String[] array) {
+        System.out.print("[");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print("\"" + array[i] + "\"");
+            if (i < array.length - 1) System.out.print(", ");
+        }
+        System.out.println("]");
+    }
+}
