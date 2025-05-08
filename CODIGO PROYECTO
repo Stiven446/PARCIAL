@@ -134,6 +134,6 @@ public class Main {
 
         // Finalizar Alquiler y Calcular Costo
         alquiler1.finalizarAlquiler();
-        System.out.println("Costo total: $" + alquiler1.calcularCosto());
+        System.out.println("Costo total: $1" + alquiler1.calcularCosto());
     }
 }
