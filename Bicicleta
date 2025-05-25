@@ -1,0 +1,19 @@
+public class Bicicleta {
+    private int idBicicleta;
+    private String marca;
+    private String modelo;
+    private EstadoBicicleta estado;
+    private float costo;
+
+    public void cambiarEstado(EstadoBicicleta nuevoEstado) {
+        this.estado = nuevoEstado;
+    }
+
+    public void verificarEstado() {
+        System.out.println("Estado actual: " + estado);
+    }
+
+    public void modificarDatos() {
+        // Lógica para modificar datos
+    }
+}
