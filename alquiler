@@ -1,0 +1,19 @@
+import java.util.Date;
+
+public class Alquiler {
+    private int idAlquiler;
+    private Date fechaInicio;
+    private Date fechaFin;
+
+    public void iniciarAlquiler() {
+        // Implementación del método iniciarAlquiler
+    }
+
+    public void finalizarAlquiler() {
+        // Implementación del método finalizarAlquiler
+    }
+
+    public void calcularCosto() {
+        // Implementación del método calcularCosto
+    }
+}
