@@ -1,7 +1,0 @@
-public class BicicletaMontaña extends Bicicleta {
-    private String tipoSuspension;
-
-    public void ajustarSuspension() {
-        // Lógica para ajustar la suspensión
-    }
-}
