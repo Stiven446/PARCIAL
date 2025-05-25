@@ -1,0 +1,11 @@
+public class Cliente {
+    private int idCliente;
+    private String nombre;
+    private String telefono;
+    private String correo;
+
+    public void registrarCliente() {
+        // Lógica para registrar cliente
+        System.out.println("Cliente registrado.");
+    }
+}
