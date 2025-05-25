@@ -1,7 +1,0 @@
-public class BicicletaRuta extends Bicicleta {
-    private float peso;
-
-    public void medirAerodinámica() {
-        // Lógica para medir aerodinámica
-    }
-}
