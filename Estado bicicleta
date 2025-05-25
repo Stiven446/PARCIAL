@@ -1,0 +1,35 @@
+public class EstadoBicicleta {
+    private int idEstado;
+    private String nombreEstado;
+
+    public void obtenerEstado() {
+        System.out.println("Estado: " + nombreEstado);
+    }
+
+    public void cambiarEstado(String estado) {
+        this.nombreEstado = estado;
+        System.out.println("Estado cambiado a: " + estado);
+    }
+
+    // Opcional: constructor, getters y setters
+    public EstadoBicicleta(int idEstado, String nombreEstado) {
+        this.idEstado = idEstado;
+        this.nombreEstado = nombreEstado;
+    }
+
+    public int getIdEstado() {
+        return idEstado;
+    }
+
+    public void setIdEstado(int idEstado) {
+        this.idEstado = idEstado;
+    }
+
+    public String getNombreEstado() {
+        return nombreEstado;
+    }
+
+    public void setNombreEstado(String nombreEstado) {
+        this.nombreEstado = nombreEstado;
+    }
+}
